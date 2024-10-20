@@ -6,6 +6,7 @@ Sunshine automation setup.
 You should create a sunshine.env file located in the same directory as sunshine.py
 This config file should have these keys:
 
+```
 DEVCON_PATH=C:\Program Files (x86)\Windows Kits\10\Tools\10.0.22621.0\x86
 SUNSHINE_PATH=C:\Program Files\Sunshine\
 SUNSHINE_SHORTCUT=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Sunshine\Sunshine.lnk
@@ -15,7 +16,7 @@ SUNSHINE_AUTH=
 # Not needed, but will be used if present
 ENCODER=nvenc
 NVENC_PRESET=1
-
+```
 
 You should obviously change the variables that are custom for each user. But this is mostly just the SUNSHINE_AUTH key. That is found by navigating to the sunshine webui after launching it. Open Developer tools with F12 and go to network tab. Clear the history to get a better overview of the new requests. Go to configratuion->general and change the Log Level temporarily to whatever and click save.
 You should now see a new network request in the list, you should be able to find the auth token by marking it in the list and checking the headers of that request. There is a key 'Authorization: Basic LKJlskdf0s89jlksfhgLJKH90lnnl='
