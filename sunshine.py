@@ -1,30 +1,29 @@
 import sys
 import subprocess
 import os
+import re
+import time
+import logging
+import json
 modules = [
-    're',
-    'time',
+    'python-dotenv',
     'pyuac',
     'psutil',
     'logging',
     'requests',
-    'json',
     'urllib3',
-    'pyautogui'
+    'pyautogui',
+    'pywin32'
 ]
 for module in modules:
     try:
         __import__(module)
     except ImportError:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install', module])
-import re
-import time
 import pyuac
 import psutil
-import logging
 import requests
 import requests.exceptions
-import json
 import urllib3
 import pyautogui
 from dotenv import load_dotenv
